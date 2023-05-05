@@ -73,7 +73,7 @@ rm -rf openssl-${OPENSSL_VER}
 # Build curl.
 tar -xf curl-${CURL_VER}.tar.xz
 cd curl-${CURL_VER}
-./configure --prefix="${workdir}" --enable-static --disable-shared --with-openssl --enable-threaded-resolver --with-ca-path=/etc/ssl/certs
+./configure --prefix="${workdir}" --enable-static --disable-shared --with-openssl --enable-threaded-resolver --without-brotli --with-ca-path=/etc/ssl/certs
 make
 make install
 cd ..
